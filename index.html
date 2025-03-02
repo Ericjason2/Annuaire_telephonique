@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annuaire Téléphonique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="sidebarToggle">☰</button>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Paramètres</a></li>
+        </ul>
+    </div>
+    <div class="container" id="mainContent">
+        <h1>Annuaire Téléphonique</h1>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Nom" required>
+            <input type="text" id="phone" placeholder="Numéro de Téléphone" required>
+            <button type="submit">Ajouter Contact</button>
+        </form>
+        <table id="contact-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Numéro de Téléphone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="contact-list"></tbody>
+        </table>
+    </div>
+
+    <!-- Modal pour les détails du contact -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Détails du Contact</h2>
+            <p id="contactDetails"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
